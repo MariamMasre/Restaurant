@@ -1,0 +1,73 @@
+
+body{
+    background: linear-gradient(rgb(26, 63, 2),rgb(52, 219, 19));
+    height: 100vh;
+    font-family:'Franklin Gothic Medium';
+}
+p{
+  
+    text-transform: uppercase;
+   
+    font-size: small;
+    align-items: center;
+    
+   
+}
+
+a{
+    text-decoration: none;
+    color:floralwhite;
+}
+#form{
+    font-size: 15px;
+    margin: 60px;
+    text-decoration: none;
+    color:rgb(3, 34, 2);
+    justify-content: space-between;
+   
+}
+header{
+    
+    width: 95%;
+    z-index: 100;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+header .logo{
+    font-size: 25px;
+    margin: 30px;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li{
+margin-right: 30px;
+}
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+    }
+    header ul li a:hover,.active{
+        background: #e7e413;
+        color: rgb(4, 35, 41);
+    }
+    .social-share{display:block;overflow:hidden;margin:5px ; }
+    .social-share ul{margin:100px;padding:0px;list-style:none}
+    li.share-now i{font-size:15px;padding: 5px;height:20px;width:20px;text-align:center}
+    .social-share ul li{float:left;margin-left:1rem}
+    .social-share ul li a i{color:#fff;font-size:15px;padding: 5px;height:20px;width:20px;text-align:center;border-radius:25%;opacity:2}
+    .social-share ul li a i:hover{opacity:.7}
+    .social-share ul li a i.fa-twitter{background-color:#1da1f2}
+    .social-share ul li a i.fa-facebook-f{background-color:#3b5998}
+    .social-share ul li a i.fa-whatsapp{background-color:#25d366}
+    
+    .social-share ul li a i.fa-reddit-alien{background-color:#ff4500}
+    .social-share ul li a i.fa-linkedin-in{background-color:#0077b5}
+    .social-share ul li a i.fa-pinterest-p{background-color:#e60023}
+    

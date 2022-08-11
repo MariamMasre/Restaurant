@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet'/>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./add.css">
+</head>
+<body>
+    <header>
+        <h3><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPFR2JnNQu58mwaVKV7IOkpwoB47JOhZBDQg&usqp=CAU" class="logo" >nothing </a></h2>
+        <ul>
+            <li><a href="#" class="active" >Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="">Accounting</a></li>
+            
+        </ul>
+    
+        
+    </header>
+    
+<main>
+    <form id="form">
+        <label for="foodName">Food Name:</label><br>
+        <input type="text" id="foodName" ><br>
+        
+        
+        
+           <label for="foodType">  Types of the food</label></p>
+        <select name="foodType" id="foodType">
+
+       <option value="Fruit and vegetables">Fruit and vegetables</option>
+    
+       <option value="Starchy food">Starchy food</option>
+  
+       <option value="Dairy">Dairy</option>
+  
+       <option value="Protein">Protein</option>
+  
+       <option value="Fat">Fat</option>
+  
+    </select><br>
+    <label for="price">Price </label><br>
+    <input type="text" id="Price" name="price">
+    
+    <input type="submit" id="submit"><br>
+   
+
+
+      <table id="tabl">
+        <thead>
+        <tr>
+            <tr>ID</tr>
+            <tr>Name</tr>
+            <tr>Type</tr>
+            <tr>Price</tr>
+        </tr>
+        </thead>
+
+      </table>
+    </form>
+</main>
+    <footer>
+        <b:if cond='data:view.isSingleItem'>
+        <div class="social-share">
+        <ul>
+          <li class="share-now"><i class="fas fa-share-alt"></i></li>
+          <li>
+              <a expr:href='"https://www.facebook.com/sharer.php?u=" + data:post.url.canonical' target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+              <a expr:href='"https://twitter.com/intent/tweet?url=" + data:post.url.canonical + "&amp;text=" + data:post.title' rel="nofollow" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+              <a expr:href='"https://www.linkedin.com/shareArticle?url=" + data:post.url.canonical' rel="nofollow" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+              <a expr:href='"https://www.pinterest.com/pin/create/button/?url=" + data:post.url.canonical + "&amp;media=" + data:post.featuredImage + "&amp;description=" + data:post.title' rel="nofollow" target="_blank" title="Pinterest">
+                  <i class="fab fa-pinterest-p"></i>
+              </a>
+          </li>
+          <li>
+              <a expr:href='"https://api.whatsapp.com/send?text=" + data:post.title + " | " + data:post.url.canonical' rel="nofollow" target="_blank" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </li>
+          <li>
+              <a expr:href='"https://reddit.com/submit?url=" + data:post.url.canonical + "&amp;title=" + data:post.title' rel="nofollow" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+          </li>
+          
+      </ul>
+    </div>
+    <!--./social-share-->
+    </b:if>
+       </footer> 
+       <script src="./app.js"></script>
+</body>
+
+</html>
