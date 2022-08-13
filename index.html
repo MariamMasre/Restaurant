@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./add.css">
 </head>
 <body>
+
     <header>
         <h3><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPFR2JnNQu58mwaVKV7IOkpwoB47JOhZBDQg&usqp=CAU" class="logo" >nothing </a></h2>
         <ul>
@@ -21,48 +22,65 @@
     
         
     </header>
-    
-<main>
-    <form id="form">
-        <label for="foodName">Food Name:</label><br>
-        <input type="text" id="foodName" ><br>
+    <div class="crud">
         
-        
-        
-           <label for="foodType">  Types of the food</label></p>
-        <select name="foodType" id="foodType">
-
-       <option value="Fruit and vegetables">Fruit and vegetables</option>
+        <div class="head">
+            <h2>crud</h2>
+            <p>product managenent</p>
     
-       <option value="Starchy food">Starchy food</option>
-  
-       <option value="Dairy">Dairy</option>
-  
-       <option value="Protein">Protein</option>
-  
-       <option value="Fat">Fat</option>
-  
-    </select><br>
-    <label for="price">Price </label><br>
-    <input type="text" id="Price" name="price">
-    
-    <input type="submit" id="submit"><br>
+        </div>
    
-
-
-      <table id="tabl">
-        <thead>
-        <tr>
-            <tr>ID</tr>
-            <tr>Name</tr>
-            <tr>Type</tr>
-            <tr>Price</tr>
-        </tr>
-        </thead>
-
-      </table>
-    </form>
-</main>
+        <div class="inputs">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+               
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total">1234</small>
+            </div> 
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Create</button>
+        </div>
+    
+        <div class="outputs">
+            <div class="searchBlock">
+                <input  onkeyup ="searchData(this.value)" type="text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchTCategory">search by Category</button>
+                </div>
+               
+    
+            </div>
+            
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th> 
+                    <th>total</th> 
+                    <th>category</th> 
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+               
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+        </div>
+        
+        
+    
+        </div>
     <footer>
         <b:if cond='data:view.isSingleItem'>
         <div class="social-share">
@@ -91,7 +109,7 @@
           
       </ul>
     </div>
-    <!--./social-share-->
+    
     </b:if>
        </footer> 
        <script src="./app.js"></script>
